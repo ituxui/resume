@@ -33,7 +33,7 @@ export { MarqueePanel } from "./components/MarqueePanel/MarqueePanel";
 
 export { BrandIcon } from "./assets/BrandIcon/BrandIcon";
 
-export { FlexHeight1 } from "./atoms/FlexHeight1/FlexHeight1";
+export { FlexHeight1 } from "./assets/FlexHeight1/FlexHeight1";
 
 export { InfoItem } from "./components/InfoItem/InfoItem";
 
