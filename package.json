@@ -16,6 +16,7 @@
     "@egjs/flicking-plugins": "^4.7.1",
     "@egjs/react-flicking": "^4.14.0",
     "@floating-ui/react": "^0.27.15",
+    "@tanstack/react-router": "^1.131.5",
     "classnames": "^2.5.1",
     "embla-carousel": "^8.6.0",
     "embla-carousel-auto-height": "^8.6.0",
@@ -31,6 +32,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.25.0",
+    "@tanstack/router-plugin": "^1.131.5",
     "@types/node": "^24.0.3",
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",

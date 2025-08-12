@@ -27,6 +27,7 @@ export const InnerLink: FC<InnerLinkProps> = ({ accent, children, className, to,
         styles[`accent_${accent}`], // Применяем стили в зависимости от значения accent
         className,
       )}
+
       {...props}
     >
       {children}

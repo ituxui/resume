@@ -17,23 +17,23 @@ export const router = createBrowserRouter([
         Component: AeroaktProduct
       },
       {
-        path: "dostav",
+        path: routeMap.dostav,
         Component: DostavProduct
       },
       {
-        path: "dvipraz",
+        path: routeMap.dvipraz,
         Component: DviprazProduct
       },
       {
-        path: "rdp-dashboard",
+        path: routeMap.rdpDashboard,
         Component: RdpDashboardProduct
       },
       {
-        path: "rdp-landing",
+        path: routeMap.rdpLanding,
         Component: RdpLandingProduct
       },
       {
-        path: "tsd",
+        path: routeMap.tsd,
         Component: TsdProduct
       },
       {

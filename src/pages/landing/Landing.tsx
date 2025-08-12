@@ -477,7 +477,8 @@ export const Landing = () => {
             </div>
           </Section>
         </Section>
-      </div >
+      </div>
+
     </>
   )
 };

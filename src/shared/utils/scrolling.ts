@@ -25,7 +25,7 @@ function handleScroll(event: Event) {
     window.scrollTo({
     top: lastScrollY,
     left: lastScrollX,
-    behavior: 'smooth'
+    // behavior: 'smooth'
     });
 }
 
