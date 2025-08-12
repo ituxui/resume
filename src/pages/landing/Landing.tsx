@@ -80,11 +80,6 @@ export const Landing = () => {
               className={Styles.avaTilt}
             >
               <img
-                src='images/me/bg.png'
-                alt="Вверх"
-                className={Styles.displayNone}
-              />
-              <img
                 src='images/me/me.png'
                 alt="Вверх"
                 className={Styles.ava}

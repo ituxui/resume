@@ -41,7 +41,7 @@
 
   .avaTilt {
     overflow: visible;
-    background-image: url('images/me/bg.png');
+    background-image: url('/images/me/bg.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -59,10 +59,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
-
-  .displayNone {
-    display: none;
   }
 
   .helloSvg {
