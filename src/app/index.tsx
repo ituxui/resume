@@ -1,25 +1,31 @@
-import { StrictMode, Suspense } from 'react'
-import { RouterProvider, } from 'react-router'
-import { createRoot } from 'react-dom/client'
+import ReactDOM from 'react-dom/client'
+import { createRouter, RouterProvider } from '@tanstack/react-router';
 
-import './styles/index.scss'
-
+import './styles/index.scss';
 import '@egjs/react-flicking/dist/flicking.css';
 import '@egjs/react-flicking/dist/flicking-inline.css';
+import { routeTree } from '@src/routeTree.gen';
 
-import { router } from './routes/router'
-// import { ErrorBoundary } from '@shared/ui/utils/ErrorBoundary'
-// import { ChunkErrorBoundary } from '@shared/ui'
+// Import the generated route tree
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    {/* <ChunkErrorBoundary>
-      <ErrorBoundary> */}
-    <Suspense fallback={<></>}>
-      <RouterProvider router={router} />
+// Create a new router instance
+const router = createRouter({
+  routeTree,
+  scrollRestoration: true,
+})
 
-    </Suspense>
-    {/* </ErrorBoundary>
-    </ChunkErrorBoundary> */}
-  </StrictMode>,
-)
+// Register things for typesafety
+declare module '@tanstack/react-router' {
+  interface Register {
+    router: typeof router
+  }
+}
+
+
+const rootElement = document.getElementById('root')!
+
+if (!rootElement.innerHTML) {
+  const root = ReactDOM.createRoot(rootElement)
+  root.render(<RouterProvider router={router} />)
+}
+

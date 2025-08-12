@@ -1,18 +1,26 @@
 // components/PageModal/PageModal.tsx
 import { useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
-import { useSearchParams, } from 'react-router';
 import { type PageModalType } from '../types';
 import styles from './PageModal.module.scss';
 import { ModalContent } from './ModalContent';
 import { usePageModal } from './usePageModal';
 import { useScrollLock } from '@shared/hooks';
+import { useSearch, } from '@tanstack/react-router';
 
 const VALID_MODAL_TYPES = new Set<PageModalType>(['media', 'soft-skills', 'books', 'higher-education', 'programms', 'technologies', 'courses', 'ai']);
 
 
 export const PageModalPortal = () => {
-  const [searchParams] = useSearchParams();
+  // const router = useRouter()
+  // const searchParams = new URLSearchParams(router.state.location.search);
+
+  const search = useSearch({
+    strict: false,
+  })
+  const searchParams = new URLSearchParams(search);
+
+  console.log(searchParams);
   // const navigate = useNavigate();
   const { closeModal } = usePageModal();
   // const modalRef = useRef<HTMLDivElement>(null);

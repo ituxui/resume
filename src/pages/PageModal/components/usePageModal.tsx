@@ -1,15 +1,17 @@
 import React from 'react';
-import { useNavigate, useSearchParams } from 'react-router';
 import type { PageModalType } from '../types';
+import { useNavigate, useRouter, } from '@tanstack/react-router';
 
 export const usePageModal = () => {
-  const [searchParams] = useSearchParams();
+  const router = useRouter()
+  const searchParams = new URLSearchParams(router.state.location.search);
+  console.log(searchParams);
   const navigate = useNavigate();
 
   const openModal = (modal: PageModalType) => {
     const params = new URLSearchParams(window.location.search);
     params.set('modal', modal);
-    navigate(`?${params.toString()}`, { replace: true, preventScrollReset: true });
+    navigate({ search: { modal: params.get('modal') }, resetScroll: false });
   };
 
   const createOpenModalHandler = (modalType: PageModalType) => (e: React.MouseEvent) => {
@@ -29,7 +31,7 @@ export const usePageModal = () => {
     // The `replace: true` option ensures the browser history is replaced,
     // so the user can't go "back" to the modal.
     // The `preventScrollReset: true` option is useful to keep the scroll position.
-    navigate(`?${params.toString()}`, { replace: true, preventScrollReset: true });
+    navigate({ search: {}, resetScroll: false });
   };
 
   return { openModal, closeModal, createOpenModalHandler };

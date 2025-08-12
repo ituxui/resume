@@ -5,8 +5,8 @@ import { Calendar, Check, Loader2 } from 'lucide-react'; // Импортируе
 import type { TimelineItemData } from './Timeline.types';
 import { Heading } from '@shared/ui/assets/Heading/Heading';
 import { Section } from '@shared/ui/wrappers/sections/Section';
+import { useNavigate } from '@tanstack/react-router';
 // import { Badge } from '@shared/ui/components/Badge/Badge';
-import { useNavigate } from 'react-router';
 
 interface TimelineItemProps {
   item: TimelineItemData;
@@ -54,7 +54,7 @@ export const TimelineItem: React.FC<TimelineItemProps> = ({ item, isLast }) => {
             )}
             onClick={() => {
               if (item.innerLink) {
-                navigate(item.innerLink);
+                navigate(item.innerLink as any);
               }
             }}
           >{item.title}</Heading>

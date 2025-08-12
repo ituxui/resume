@@ -1,8 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router';
 import classNames from 'classnames';
 import styles from './FooterNavigation.module.scss';
 import { portfolioData } from '@shared/data/portfolioData';
+import { Link } from '@tanstack/react-router';
 
 
 type PortfolioTitle = typeof portfolioData[number]['title'];
@@ -22,7 +22,7 @@ export const FooterNavigation: React.FC<PropsFooterNavigation> = ({ current }) =
   return (
     <nav className={styles.navigation}>
       {next && (
-        <Link to={`../${next.url}`} relative='path' className={classNames(styles.navButton, styles.next)}>
+        <Link to={`../${next.url}`} className={classNames(styles.navButton, styles.next)}>
           <span className={styles.secondary}>Следующий проект</span>
           <div className={styles.buttonContent}>
             <svg className={styles.icon} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -33,7 +33,7 @@ export const FooterNavigation: React.FC<PropsFooterNavigation> = ({ current }) =
         </Link>
       )}
       {prev && (
-        <Link to={`../${prev.url}`} relative='path' className={classNames(styles.navButton, styles.prev)}>
+        <Link to={`../${prev.url}`} className={classNames(styles.navButton, styles.prev)}>
           <span className={styles.secondary}>Предыдущий проект</span>
           <div className={styles.buttonContent}>
             <svg className={styles.icon} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

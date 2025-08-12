@@ -1,9 +1,9 @@
-import { Link, type LinkProps } from 'react-router';
 import { type FC, type ReactNode } from 'react';
 import classNames from 'classnames';
 // import { routeImportMap } from '@routes';
 import styles from './Link.module.scss';
 import type { LinkAccent } from './links.types';
+import { Link, type LinkProps } from '@tanstack/react-router';
 
 
 // Пропсы для InnerLink, расширяющие LinkProps
@@ -11,6 +11,7 @@ interface InnerLinkProps extends LinkProps {
   to: string;
   children: ReactNode;
   accent?: LinkAccent; // Необязательное свойство accent, по умолчанию 'default'
+  className?: string;
 }
 
 export const InnerLink: FC<InnerLinkProps> = ({ accent, children, className, to, ...props }) => {

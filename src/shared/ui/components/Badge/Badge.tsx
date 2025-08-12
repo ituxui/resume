@@ -1,8 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router';
 import classNames from 'classnames';
 import styles from './Badge.module.scss';
 import { Icon, type IconTypes } from '@shared/ui/assets/icons';
+import { Link } from '@tanstack/react-router';
 
 type Variant = 'fill' | 'outline' | 'black';
 
