@@ -1,11 +1,11 @@
-import { decreaseBlockedScrollElementsQuantity, increaseBlockedScrollElementsQuantity } from "@store/handleScroll.store";
-import { useEffect } from "react";
+// import { decreaseBlockedScrollElementsQuantity, increaseBlockedScrollElementsQuantity } from "@store/handleScroll.store";
+// import { useEffect } from "react";
 
-export const useHandleScroll = () => {
-  useEffect(() => {
-    increaseBlockedScrollElementsQuantity();
-    return () => {
-      decreaseBlockedScrollElementsQuantity();
-    };
-  }, []);
-};
+// export const useHandleScroll = () => {
+//   useEffect(() => {
+//     increaseBlockedScrollElementsQuantity();
+//     return () => {
+//       decreaseBlockedScrollElementsQuantity();
+//     };
+//   }, []);
+// };

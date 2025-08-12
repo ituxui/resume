@@ -12,8 +12,8 @@ export const AiModalContent = () => (
 
       <PageModal.Content>
         <Section sublevel={1}>
-          {aiData.map((item) => {
-            return <ObserveCardSection {...item} />
+          {aiData.map((item, index) => {
+            return <ObserveCardSection key={index} {...item} />
           })}
         </Section>
       </PageModal.Content>

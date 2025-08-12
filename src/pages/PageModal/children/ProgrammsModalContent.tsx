@@ -12,8 +12,8 @@ export const ProgrammsModalContent = () => (
 
       <PageModal.Content>
         <Section sublevel={1}>
-          {programmsData.map((item) => {
-            return <ObserveCardSection {...item} />
+          {programmsData.map((item, key) => {
+            return <ObserveCardSection key={key} {...item} />
           })}
         </Section>
       </PageModal.Content>

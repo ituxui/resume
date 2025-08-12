@@ -11,8 +11,8 @@ export const ObserveCardSection = (item: TypeObserveCardsSection) => {
     {item.description && <div className={classNames(CommonStyles.muted, Styles['observe-card-section-description'])}>{item.description}</div>}
     <div className={Styles['observe-card-section-items']}>
       {
-        item.items.map((item) => {
-          return <ObserveCard {...item} />
+        item.items.map((item, index) => {
+          return <ObserveCard key={index} {...item} />
         })
       }
     </div>

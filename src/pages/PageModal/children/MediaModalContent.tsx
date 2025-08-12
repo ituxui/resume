@@ -12,8 +12,8 @@ export const MediaModalContent = () => (
 
       <PageModal.Content>
         <Section sublevel={1}>
-          {mediaData.map((item) => {
-            return <ObserveCardSection {...item} />
+          {mediaData.map((item, index) => {
+            return <ObserveCardSection key={index} {...item} />
           })}
         </Section>
       </PageModal.Content>

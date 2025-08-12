@@ -11,8 +11,8 @@ export const CoursesModalContent = () => (
 
       <PageModal.Content>
         <Section sublevel={1}>
-          {coursesData.map((item) => {
-            return <ObserveCardSection {...item} />
+          {coursesData.map((item, index) => {
+            return <ObserveCardSection key={index} {...item} />
           })}
         </Section>
       </PageModal.Content>

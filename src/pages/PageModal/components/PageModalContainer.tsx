@@ -1,4 +1,4 @@
-import { useHandleScroll } from '@shared/hooks';
+// import { useHandleScroll } from '@shared/hooks';
 import styles from './PageModal.module.scss';
 import classNames from 'classnames';
 // import { usePageModal } from './usePageModal';
@@ -7,7 +7,7 @@ type PageModalContainerProps = {} & React.HTMLAttributes<HTMLDivElement>;
 
 export const PageModalContainer = ({ children, className }: PageModalContainerProps) => {
   // const { closeModal } = usePageModal();
-  useHandleScroll();
+  // useHandleScroll();
   return (
     <div
       className={classNames(styles.modal, 'modal', className)}

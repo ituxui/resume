@@ -6,6 +6,7 @@ import { type PageModalType } from '../types';
 import styles from './PageModal.module.scss';
 import { ModalContent } from './ModalContent';
 import { usePageModal } from './usePageModal';
+import { useScrollLock } from '@shared/hooks';
 
 const VALID_MODAL_TYPES = new Set<PageModalType>(['media', 'soft-skills', 'books', 'higher-education', 'programms', 'technologies', 'courses', 'ai']);
 
@@ -20,6 +21,10 @@ export const PageModalPortal = () => {
   const [activeModal, setActiveModal] = useState<PageModalType | null>(null);
 
   // useHandleScroll()
+
+
+  // Блокировка скролла при fullView
+  useScrollLock(!!activeModal);
 
   // 1. Синхронизация: URL → состояние при изменении searchParams
   useEffect(() => {
