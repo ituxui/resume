@@ -285,8 +285,11 @@ $secondBentoAreas: programms ai education courses soft_skills books media
     gap: 8px;
     padding: 8px 14px;
     border-radius: 999px;
-    background: var(--bg_color-accent_default-backface_light-solid--enabled);
+    background: var(--bg-read-color-body);
     border: 1px solid var(--border_color-accent_default--enabled);
+    &:hover {
+      background: var(--bg-read-color-body);
+    }
   }
 }
 

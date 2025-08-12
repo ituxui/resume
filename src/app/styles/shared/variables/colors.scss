@@ -33,5 +33,9 @@
     --bg-color-solid-darker-body
   );
 
+  --bg_color-accent_default-backface_empty-solid--enabled: var(
+    --bg-color-solid-body
+  );
+
   --border_color-accent_default--enabled: hsla(0, 0%, 16.08%, 0.21);
 }
