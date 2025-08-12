@@ -60,7 +60,11 @@ export const Landing = () => {
             <Badge href='https://vk.com/indigosay' />
             <Badge href='https://t.me/Rumar1' />
             <Badge href='xreider@yandex.ru' />
-            <Badge href='/' text="PDF" iconName='printer' />
+            <Badge
+              text="PDF"
+              href="/resume.pdf" // Путь к файлу в папке public
+              download={true} // Указываем, что нужно скачать файл
+            />
           </div>
 
           <Heading size={3} kind='thin' className={classNames(Styles.description, CommonStyles.muted)}>
@@ -465,7 +469,11 @@ export const Landing = () => {
               <Badge href='https://vk.com/indigosay' />
               <Badge href='https://t.me/Rumar1' />
               <Badge href='xreider@yandex.ru' />
-              <Badge href='/' text="PDF" iconName='printer' />
+              <Badge
+                text="PDF"
+                href="/resume.pdf" // Путь к файлу в папке public
+                download={true} // Указываем, что нужно скачать файл
+              />
             </div>
           </Section>
         </Section>

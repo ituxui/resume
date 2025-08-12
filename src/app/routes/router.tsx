@@ -1,9 +1,9 @@
-import { createHashRouter } from "react-router";
+import { createBrowserRouter } from "react-router";
 import { routeMap } from "./utils";
 import { App } from "../ui/App";
 import { AeroaktProduct, DostavProduct, DviprazProduct, Landing, RdpDashboardProduct, RdpLandingProduct, TsdProduct, UipProduct } from "@pages";
 
-export const router = createHashRouter([
+export const router = createBrowserRouter([
   {
     path: "/",
     Component: App,

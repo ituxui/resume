@@ -16,6 +16,7 @@ type Props = {
   inverted?: boolean;
   size?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
   onClick?: React.MouseEventHandler<HTMLButtonElement | HTMLAnchorElement>;
+  download?: boolean; // Добавьте этот пропс
 };
 
 export const Badge: React.FC<Props> = ({
@@ -27,6 +28,7 @@ export const Badge: React.FC<Props> = ({
   inverted = false,
   size = 'h1',
   className,
+  download = false, // Установите значение по умолчанию
   ...props
 }) => {
   const isInternal = href?.startsWith('/');
@@ -38,6 +40,7 @@ export const Badge: React.FC<Props> = ({
 
   const getIconName = (): IconTypes => {
     if (iconName) return iconName;
+    if (download) return 'printer'; // Новый иконка для скачивания
     if (isEmail) return 'mail';
     if (isTelegram) return 'telegram';
     if (isVk) return 'vk';
@@ -61,15 +64,27 @@ export const Badge: React.FC<Props> = ({
       styles[`size-${size}`],
       {
         [styles['inverted']]: inverted,
-        [styles['notHoverable']]: notHoverable
+        [styles['notHoverable']]: notHoverable,
       },
       className
     ),
   };
 
+  // Измените условие для рендеринга тега <a>, чтобы добавить атрибут download
   if (!href) return <button {...commonProps}>{content}</button>;
-  if (isInternal) return <Link to={href} {...commonProps}>{content}</Link>;
+  if (isInternal) {
+    if (download) {
+      return (
+        <a href={href} download {...commonProps}>
+          {content}
+        </a>
+      );
+    }
+    return <Link to={href} {...commonProps}>{content}</Link>;
+  }
+
   if (isEmail) return <a href={`mailto:${href}`} target="_blank" rel="noopener noreferrer" {...commonProps}>{content}</a>;
+
   return (
     <a href={href} target="_blank" rel="noopener noreferrer" {...commonProps}>
       {content}
