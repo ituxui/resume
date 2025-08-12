@@ -23,7 +23,7 @@ export { FeatureLargeImageCard } from "./components/cards/FeatureLargeImageCard/
 
 export { FeatureLargeImageExternalLinkCard } from "./components/cards/FeatureLargeImageExternalLinkCard/FeatureLargeImageExternalLinkCard";
 
-export { FeatureBrandCard } from "./components/cards/FeatureBrandCard/FeatureBrandCard";
+// export { FeatureBrandCard } from "./components/cards/FeatureBrandCard/FeatureBrandCard";
 
 export { BubbleWrapItem } from "./components/buttons/BubbleWrapItem/BubbleWrapItem";
 

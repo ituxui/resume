@@ -127,7 +127,7 @@ export const GalleryBrief: React.FC<PropType> = ({ images, options, mode = 'full
               <div
                 className={classNames(styles['galleryBrief__slide'], 'modal')}
                 key={index}
-                style={isFullView ? { overflowY: 'auto', maxHeight: '100vh' } : {}}
+                style={isFullView ? { overflowY: 'auto', maxHeight: '100dvh' } : {}}
               >
                 <img
                   src={imgSrc}

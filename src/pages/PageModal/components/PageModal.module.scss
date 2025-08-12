@@ -3,7 +3,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100dvh;
   background: rgb(15 18 25 / 60%);
   backdrop-filter: blur(10px);
   display: flex;
@@ -20,7 +20,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 100vh;
+  height: 100dvh;
   padding: var(--padding-left_right_edges);
   max-width: var(--width-max-text-content);
 }

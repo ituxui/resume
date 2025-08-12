@@ -87,8 +87,8 @@
     grid-template-areas:
       'heading'
       'image'
-      'links'
-      'description';
+      'description'
+      'links';
   }
 }
 
@@ -285,7 +285,7 @@ $secondBentoAreas: programms ai education courses soft_skills books media
     gap: 8px;
     padding: 8px 14px;
     border-radius: 999px;
-    background: var(--bg_color-accent_default-backface_light-alpha--enabled);
+    background: var(--bg_color-accent_default-backface_light-solid--enabled);
     border: 1px solid var(--border_color-accent_default--enabled);
   }
 }
